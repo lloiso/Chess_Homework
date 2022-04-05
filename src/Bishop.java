@@ -19,6 +19,7 @@ public class Bishop extends ChessPiece{
                 return false;
             }
 
+            // from up-left to down-right
             if ((column == getMin(column, toColumn) && line == getMax(line, toLine)) ||
                     (toColumn == getMin(column, toColumn) && toLine == getMax(line, toLine))) {
                 int fromL = getMax(line, toLine);
@@ -37,6 +38,7 @@ public class Bishop extends ChessPiece{
                 }
                 return true;
             } else {
+                // from down-left to up-right
                 int fromL = getMin(line, toLine);
                 int fromC = getMin(column, toColumn);
                 int toL = getMax(line, toLine);
@@ -53,8 +55,7 @@ public class Bishop extends ChessPiece{
                 }
                 return true;
             }
-        } else return false;
-    }
+        } else return false;    }
 
     @Override
     public String getSymbol() {

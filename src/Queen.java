@@ -38,6 +38,7 @@ public class Queen extends ChessPiece {
                 }
                 return true;
             } else {
+                // from down-left to up-right
                 int fromL = getMin(line, toLine);
                 int fromC = getMin(column, toColumn);
                 int toL = getMax(line, toLine);
